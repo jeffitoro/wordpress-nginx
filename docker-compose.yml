@@ -1,0 +1,12 @@
+version: "3.7"
+
+services: 
+  wordpress:
+    # image: wordpress:php7.4-fpm-alpine
+    build: 
+      context: ./
+      dockerfile: docker/wordpress/Dockerfile 
+    ports: 
+      - "8080:80"
+    volumes: 
+      - ./wordpress:/var/www/html
